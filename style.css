@@ -1,0 +1,108 @@
+#circular_nav {
+    position: relative;
+    width: 100%;
+    min-width: 680px;
+    min-height: 700px;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+#circular_nav #hint {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 310px);
+    width: 620px;
+    height: 60px;
+    z-index: 2;
+    background: url(begin_here.jpg) no-repeat center / cover;
+}
+
+#circular_nav #map {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 310px);
+    width: 620px;
+    height: 620px;
+    z-index: 3;
+    background: url(course_bg.jpg) no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circular_nav #map h1 {
+    max-width: 66%;
+    text-align: center;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, .2);
+}
+
+#circular_nav ol {
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 310px);
+    z-index: 4;
+}
+
+#circular_nav ol>li {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#circular_nav ol>li>a {
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, .9);
+    border-radius: 120px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .1s ease, box-shadow .1s ease;
+}
+
+#circular_nav ol>li.selected>a,
+#circular_nav ol>li>a:hover {
+    transform: scale(1.5);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+
+#circular_nav ol>li.selected>a {
+    border: 2px solid rgba(53, 72, 133, 1);
+}
+
+#circular_nav ol>li>a>span {
+    flex: 1;
+    text-align: center;
+    text-shadow: none;
+    color: rgba(255, 255, 255, 0);
+    transition: background-color .3s ease, color .2s ease;
+}
+
+#circular_nav ol>li.selected>a>span,
+#circular_nav ol>li>a:hover>span {
+    color: rgba(255, 255, 255, .9);
+    text-shadow: 0 0 4px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0);
+}
+
+#circular_nav ol>li>div {
+    font-weight: bold;
+    text-shadow: 1px 0 1px rgba(255, 255, 255, .2);
+    text-align: center;
+}
