@@ -66,6 +66,10 @@ The menu expects a div containing a h1 and some hyperlinks. The div will have th
 
 ```
 
+hyperlink titles become captions; image alt tags become text that appears when you mouse-over a circle.
+
+![mouseover](mouseover.jpg)
+
 In the moodle editor, add images for your circles. Then hyperlink each image to the section names or places in the course you want to jump to. Ensure that a h1 contains the text for the centre of the circle.
 
 The filter should be set up to be enabled but off globally, then enabled on only the courses where you want it to be used. Filters apply everwhere on the page (all blocks and sections) so you could have a circular menu in a block if you want.
